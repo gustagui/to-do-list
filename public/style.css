@@ -17,6 +17,7 @@
     --rosa: rgb(255, 197, 197);
     --vinho: #8a0000;
     --success: rgb(197, 255, 214);
+    --check-true: #888;
 }
 
 * {
@@ -106,6 +107,7 @@ ul li:hover {
 ul li a {
     text-decoration: none;
     color: var(--white);
+    padding-left: 2rem;
 }
 
 ul li span {
@@ -273,4 +275,33 @@ span#close-message {
 
 span#close-message:hover {
     color: var(--btnDelete);
+}
+
+ul li.check-true {
+    background-color: var(--check-true);
+    color: var(--white);
+    text-decoration: line-through;
+}
+
+ul li a.check-true::before {
+    content: "";
+    position: absolute;
+    border: var(--white) solid;
+    top: 19px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+ul li a.check-false::before {
+    content: "";
+    position: absolute;
+    border: var(--white) solid;
+    top: 23px;
+    left: 16px;
+    height: 13px;
+    width: 13px;
+    border-width: 2px;
 }
