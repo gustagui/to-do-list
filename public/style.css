@@ -305,3 +305,8 @@ ul li a.check-false::before {
     width: 13px;
     border-width: 2px;
 }
+
+#home {
+    text-decoration: none;
+    color: var(--white);
+}

@@ -86,10 +86,10 @@ const updateOneTask = async (req, res) => {
         await Task.updateOne({
             _id: req.params.id
         }, task);
-        message = "Tarefa atualizada com sucesso!"
-        type = "success"
-        res.redirect('/');
-    } catch (error) {
+        message = "Tarefa atualizada com sucesso!";
+        type = "success";
+        res.redirect("/");
+    } catch (err) {
         res.status(500).send({
             error: err.message
         });
